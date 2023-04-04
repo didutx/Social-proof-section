@@ -1,0 +1,282 @@
+:root {
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    height: 100vh;
+    background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.up,
+.down {
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1040px;
+}
+
+.info {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.title h1 {
+    color: var(--Very-Dark-Magenta);
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.info .information p {
+    color: var(--Very-Dark-Magenta);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.reviews,
+.guru,
+.besttech {
+    background-color: var(--Light-Grayish-Magenta);
+    border-radius: 5px;
+    display: flex;
+    width: 400px;
+    height: 50px;
+}
+
+.stars {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40%;
+    padding: 5%;
+}
+
+.stars-text {
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60%;
+}
+
+.reviews {
+    margin-left: 0;
+}
+
+.guru {
+    margin-left: 2rem;
+}
+
+.besttech {
+    margin-left: 4rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1040px;
+}
+
+.card-1,
+.card-2,
+.card-3 {
+    background-color: var(--Very-Dark-Magenta);
+    width: 328px;
+    height: 220px;
+    border-radius: 8px;
+    padding: 2.5%;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: 40px;
+}
+
+.top-part .left {
+    width: 30%;
+}
+
+.top-part .right {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    line-height: 20px;
+}
+
+.top-part p {
+    color: var(--White);
+    height: inherit;
+}
+
+.top-part span {
+    color: var(--Soft-Pink);
+    height: inherit;
+}
+
+.top-part img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+}
+
+.text p {
+    color: white;
+    line-height: 20px;
+}
+
+.card-1 {
+    margin-bottom: 4rem;
+}
+
+.card-2 {
+    margin-bottom: 2rem;
+}
+
+.card-3 {
+    margin: 0;
+}
+
+@media screen and (max-width:1214px) {
+
+    .up,
+    .down {
+        width: 892px;
+    }
+
+    .card-1,
+    .card-2,
+    .card-3 {
+        width: 296px;
+        gap: 1.5rem;
+        padding: 3% 0 0 2%;
+    }
+}
+
+@media screen and (max-width:900px) {
+
+    body {
+        height: 100%;
+    }
+
+    .up,
+    .down {
+        width: 977px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        height: 100vh;
+        gap: 1rem;
+        align-items: center;
+        display: flex;
+        margin-bottom: 4rem;
+    }
+
+    .reviews,
+    .guru,
+    .besttech {
+        margin-left: 0;
+    }
+
+    .card-1,
+    .card-2,
+    .card-3 {
+        margin: 0;
+        width: 308px;
+    }
+
+    .top-part .right {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:376px) {
+
+    body {
+        font-family: 'League Spartan', sans-serif;
+        /* height: 100%; */
+        background-image: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
+        background-position: left top, right bottom;
+        background-repeat: no-repeat;
+    }
+
+    .reviews,
+    .guru,
+    .besttech {
+        flex-direction: column;
+        width: 308px;
+        height: 77px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .stars-text {
+        width: inherit;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .info {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title h1 {
+        font-size: 46px;
+        text-align: center;
+    }
+
+    .information p {
+        width: 366px;
+        text-align: center;
+    }
+}
